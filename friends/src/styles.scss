@@ -1,8 +1,54 @@
 body {
   padding-right: 0 !important;
-  // // background-image: url(img/Smurfs-The-Lost-Village-cartoon-Screenshot-HD-Wallpaper-1920x1080.jpg);
+  // background-image: url(img/Perk.jpg);
   // background-size: cover;
   // background-repeat: no-repeat;
+  // background-position: center;
+  // height: 100vh;
+}
+
+.FriendsGrid {
+  padding-right: 0 !important;
+  background-image: url(img/Perk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.Login {
+  padding-right: 0 !important;
+  background-image: url(img/PerkOutside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+.Login input {
+  width: 15%;
+  height: 3vh;
+}
+.Login {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.red {
+  display: inline;
+  color: red;
+}
+
+.formbody {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+}
+
+h1 {
+  color: whitesmoke;
 }
 
 .App {
@@ -50,7 +96,7 @@ button {
 .formContainer {
   .form-group {
     margin-right: 5%;
-    // color: white;
+    color: white;
   }
 }
 .savethesmurf {
@@ -75,4 +121,7 @@ input {
   text-size-adjust: auto;
   width: 20rem !important;
   border: 0 !important;
+}
+.sc-fzXfLU {
+  justify-content: center;
 }

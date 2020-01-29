@@ -13,27 +13,29 @@ const FriendsGrid = () => {
     dispatch(friendsFetch());
   }, [dispatch]);
   return (
-    <div>
+    <div className='FriendsGrid'>
+      <h1>Friends List</h1>
+
       {!state.friends && !state.isloading && <h2>Waiting on Friends ...</h2>}
 
       {console.log(state.editing, "edit")}
 
       <FriendForm />
-      {friends && !state.isloading && (
-        <div className='smurfs'>
-          {friends.map(friend => (
-            <Friends key={friend.id} state={state} friend={friend} />
-          ))}
-        </div>
-      )}
       {state.isloading && (
         <Loader
           type='BallTriangle'
           color='#00BFFF'
           height={100}
           width={100}
-          timeout={3000} //3 secs
+          timeout={3000}
         />
+      )}
+      {friends && !state.isloading && (
+        <div className='smurfs'>
+          {friends.map(friend => (
+            <Friends key={friend.id} state={state} friend={friend} />
+          ))}
+        </div>
       )}
     </div>
   );

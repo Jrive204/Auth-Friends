@@ -3,6 +3,7 @@ import { Form, Field, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Axios from "axios";
 import { useHistory } from "react-router-dom";
+import Button from "@bootstrap-styled/v4/lib/Button";
 
 const Login = ({ values, errors, touched, status }) => {
   const [message, setMessage] = useState([]);
@@ -36,8 +37,8 @@ const Login = ({ values, errors, touched, status }) => {
 
   // REturn STARTS HERE  - -------------
   return (
-    <div>
-      <h1>My Form</h1>
+    <div className='Login'>
+      <br />
       <Formik
         initialValues={{ username: ``, password: `` }}
         validationSchema={SignupSchema}
@@ -49,19 +50,21 @@ const Login = ({ values, errors, touched, status }) => {
                 className='formFields'
                 name='username'
                 type='text'
-                placeholder='name'
-              />
+                placeholder='UserName'
+              />{" "}
+              &nbsp;
               {console.log(values, "values")}
-              <ErrorMessage name='name' component='div' className='red' />
+              <ErrorMessage name='name' component='span' className='red' />
               <Field
                 className='formFields'
                 name='password'
                 type='password'
                 placeholder='Password'
               />
-              <ErrorMessage name='password' component='div' className='red' />
+              <ErrorMessage name='password' component='span' className='red' />
               &nbsp;
-              <input type='submit' />
+              <br />
+              <Button color='success'>Sign in</Button>
             </Form>
           );
         }}
